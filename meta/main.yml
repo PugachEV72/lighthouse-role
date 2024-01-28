@@ -1,4 +1,6 @@
 galaxy_info:
+  role_name: lighthouse_role
+  namespace: tanker72 
   author: Eugen Pugach
   description: This role install and configure the Lighthouse application
   company: Netology
