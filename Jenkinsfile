@@ -13,6 +13,13 @@ pipeline {
                 }
             }
         }
+        stage('Get role') {
+            steps {
+                dir('lighthouse-role') {
+                    git branch: 'master', credentialsId: 'ac3dd0c9-9321-427a-8c76-8bf862119ead', url: 'https://github.com/PugachEV72/lighthouse-role.git'
+                }
+            }
+        }
         stage('Install molecule') {
             steps {
                 sh 'pip3 install molecule==3.4.0 molecule-docker'
