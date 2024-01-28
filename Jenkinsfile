@@ -24,6 +24,7 @@ pipeline {
         stage('Test role') {
             steps {
                 dir('lighthouse-role') {
+                    sh 'export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/usr/local/bin/'
                     sh 'molecule test'
                 }
             }
